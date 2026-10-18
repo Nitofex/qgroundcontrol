@@ -1,0 +1,85 @@
+{
+    "fileType": "ParameterActions",
+    "version": 1,
+    "actions": [
+        {
+            "label": "Disable GPS aiding",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_CTRL",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "label": "Enable GPS aiding",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_CTRL",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "label": "Bad parameter present",
+            "parameters": [
+                {
+                    "name": "ASDSADSAD",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "label": "Multi-param SET",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_YAW_OFF",
+                    "value": 1.0
+                },
+                {
+                    "name": "EKF2_GPS_V_NOISE",
+                    "value": 2.0
+                },
+                {
+                    "name": "EKF2_GPS_V_GATE",
+                    "value": 3.0
+                }
+            ]
+        },
+        {
+            "label": "Multi-param RESET",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_YAW_OFF",
+                    "value": 0.0
+                },
+                {
+                    "name": "EKF2_GPS_V_NOISE",
+                    "value": 0.30
+                },
+                {
+                    "name": "EKF2_GPS_V_GATE",
+                    "value": 5.0
+                }
+            ]
+        },
+        {
+            "label": "Reboot req param",
+            "parameters": [
+                {
+                    "name": "SYS_AUTOSTART",
+                    "value": 10020
+                }
+            ]
+        },
+        {
+            "label": "Reboot req param RESET",
+            "parameters": [
+                {
+                    "name": "SYS_AUTOSTART",
+                    "value": 10040
+                }
+            ]
+        }
+    ]
+}
