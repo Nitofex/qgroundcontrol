@@ -21,6 +21,7 @@
 #include "LogViewerSettings.h"
 #include "MapsSettings.h"
 #include "MavlinkActionsSettings.h"
+#include "ParameterActionsSettings.h"
 #include "MavlinkSettings.h"
 #include "NTRIPSettings.h"
 #include "OfflineMapsSettings.h"
@@ -64,6 +65,7 @@ void SettingsManager::init()
     _autoConnectSettings = new AutoConnectSettings(this);
     _batteryIndicatorSettings = new BatteryIndicatorSettings(this);
     _mavlinkActionsSettings = new MavlinkActionsSettings(this);
+    _parameterActionsSettings = new ParameterActionsSettings(this);
     _firmwareUpgradeSettings = new FirmwareUpgradeSettings(this);
     _flightMapSettings = new FlightMapSettings(this);
     _flightModeSettings = new FlightModeSettings(this);
@@ -122,6 +124,7 @@ AppSettings *SettingsManager::appSettings() const { return _appSettings; }
 AutoConnectSettings *SettingsManager::autoConnectSettings() const { return _autoConnectSettings; }
 BatteryIndicatorSettings *SettingsManager::batteryIndicatorSettings() const { return _batteryIndicatorSettings; }
 MavlinkActionsSettings *SettingsManager::mavlinkActionsSettings() const { return _mavlinkActionsSettings; }
+ParameterActionsSettings *SettingsManager::parameterActionsSettings() const { return _parameterActionsSettings; }
 FirmwareUpgradeSettings *SettingsManager::firmwareUpgradeSettings() const { return _firmwareUpgradeSettings; }
 FlightMapSettings *SettingsManager::flightMapSettings() const { return _flightMapSettings; }
 FlightModeSettings *SettingsManager::flightModeSettings() const { return _flightModeSettings; }

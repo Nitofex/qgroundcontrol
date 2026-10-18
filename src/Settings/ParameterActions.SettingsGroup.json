@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "fileType": "FactMetaData",
+    "QGC.MetaData.Facts": [
+        {
+            "name": "parameterActionsFile",
+            "shortDesc": "Name of JSON parameter actions file for Fly View",
+            "type": "string",
+            "default": "",
+            "label": "Fly View Parameter Actions"
+        }
+    ]
+}

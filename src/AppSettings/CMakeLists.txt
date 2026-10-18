@@ -143,6 +143,7 @@ qt_add_qml_module(
               PX4LogControl.qml
               PX4LogFileManager.qml
               PX4LogUploadSettings.qml
+              ParameterActionSettings.qml
               QmlTest.qml
               RemoteIDGpsLocation.qml
               SerialSettings.qml

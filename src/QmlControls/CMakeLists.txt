@@ -23,6 +23,10 @@ target_sources(${CMAKE_PROJECT_NAME}
         MavlinkAction.h
         MavlinkActionManager.cc
         MavlinkActionManager.h
+        ParameterActionManager.cc
+        ParameterActionManager.h
+        ParameterAction.cc
+        ParameterAction.h
         ObjectItemModelBase.cc
         ObjectItemModelBase.h
         ObjectListModelBase.cc

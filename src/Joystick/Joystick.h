@@ -15,6 +15,7 @@
 #include "JoystickSettings.h"
 
 class MavlinkActionManager;
+class ParameterActionManager;
 class QmlObjectListModel;
 class Vehicle;
 class JoystickManager;
@@ -468,6 +469,7 @@ private:
     QVector<ButtonEvent_t> _buttonEventStates;
     QVector<AssignedButtonAction*> _assignedButtonActions;
     MavlinkActionManager *_mavlinkActionManager = nullptr;
+    ParameterActionManager *_parameterActionManager = nullptr;
     QmlObjectListModel *_availableButtonActions = nullptr;
 
     JoystickManager* _joystickManager = nullptr;

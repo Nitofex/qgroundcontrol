@@ -3,6 +3,9 @@
 #include "MavlinkAction.h"
 #include "MavlinkActionManager.h"
 #include "MavlinkActionsSettings.h"
+#include "ParameterAction.h"
+#include "ParameterActionManager.h"
+#include "ParameterActionsSettings.h"
 #include "FirmwarePlugin.h"
 #include "GimbalController.h"
 #include "QGCCorePlugin.h"
@@ -82,6 +85,7 @@ Joystick::Joystick(const QString &name, int axisCount, int buttonCount, int hatC
     , _buttonEventStates(_totalButtonCount)
     , _assignedButtonActions(_totalButtonCount, nullptr)
     , _mavlinkActionManager(new MavlinkActionManager(SettingsManager::instance()->mavlinkActionsSettings()->joystickActionsFile(), this))
+    , _parameterActionManager(new ParameterActionManager(SettingsManager::instance()->parameterActionsSettings()->parameterActionsFile(), this))
     , _availableButtonActions(new QmlObjectListModel(this))
     , _joystickManager(JoystickManager::instance())
     , _joystickSettings(name, _axisCount, _totalButtonCount)

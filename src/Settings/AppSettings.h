@@ -61,15 +61,16 @@ public:
     // at startup before SettingsManager is initialized.
     static constexpr const char *clearSettingsNextBootKey = "clearSettingsNextBoot";
 
-    Q_PROPERTY(QString missionSavePath          READ missionSavePath            NOTIFY savePathsChanged)
-    Q_PROPERTY(QString parameterSavePath        READ parameterSavePath          NOTIFY savePathsChanged)
-    Q_PROPERTY(QString telemetrySavePath        READ telemetrySavePath          NOTIFY savePathsChanged)
-    Q_PROPERTY(QString logSavePath              READ logSavePath                NOTIFY savePathsChanged)
-    Q_PROPERTY(QString videoSavePath            READ videoSavePath              NOTIFY savePathsChanged)
-    Q_PROPERTY(QString photoSavePath            READ photoSavePath              NOTIFY savePathsChanged)
-    Q_PROPERTY(QString crashSavePath            READ crashSavePath              NOTIFY savePathsChanged)
-    Q_PROPERTY(QString mavlinkActionsSavePath   READ mavlinkActionsSavePath     NOTIFY savePathsChanged)
-    Q_PROPERTY(QString settingsSavePath         READ settingsSavePath           NOTIFY savePathsChanged)
+    Q_PROPERTY(QString missionSavePath              READ missionSavePath            NOTIFY savePathsChanged)
+    Q_PROPERTY(QString parameterSavePath            READ parameterSavePath          NOTIFY savePathsChanged)
+    Q_PROPERTY(QString telemetrySavePath            READ telemetrySavePath          NOTIFY savePathsChanged)
+    Q_PROPERTY(QString logSavePath                  READ logSavePath                NOTIFY savePathsChanged)
+    Q_PROPERTY(QString videoSavePath                READ videoSavePath              NOTIFY savePathsChanged)
+    Q_PROPERTY(QString photoSavePath                READ photoSavePath              NOTIFY savePathsChanged)
+    Q_PROPERTY(QString crashSavePath                READ crashSavePath              NOTIFY savePathsChanged)
+    Q_PROPERTY(QString mavlinkActionsSavePath       READ mavlinkActionsSavePath     NOTIFY savePathsChanged)
+    Q_PROPERTY(QString parameterActionsSavePath     READ parameterActionsSavePath   NOTIFY savePathsChanged)
+    Q_PROPERTY(QString settingsSavePath             READ settingsSavePath           NOTIFY savePathsChanged)
 
     Q_PROPERTY(QString planFileExtension        MEMBER planFileExtension        CONSTANT)
     Q_PROPERTY(QString waypointsFileExtension   MEMBER waypointsFileExtension   CONSTANT)
@@ -82,15 +83,16 @@ public:
     Q_PROPERTY(QString settingsFileExtension    MEMBER settingsFileExtension    CONSTANT)
 
 
-    QString missionSavePath       ();
-    QString parameterSavePath     ();
-    QString telemetrySavePath     ();
-    QString logSavePath           ();
-    QString videoSavePath         ();
-    QString photoSavePath         ();
-    QString crashSavePath         ();
-    QString mavlinkActionsSavePath();
-    QString settingsSavePath      ();
+    QString missionSavePath         ();
+    QString parameterSavePath       ();
+    QString telemetrySavePath       ();
+    QString logSavePath             ();
+    QString videoSavePath           ();
+    QString photoSavePath           ();
+    QString crashSavePath           ();
+    QString mavlinkActionsSavePath  ();
+    QString parameterActionsSavePath();
+    QString settingsSavePath        ();
 
     // Helper methods for working with firstRunPromptIds QVariant settings string list
     static QList<int> firstRunPromptsIdsVariantToList   (const QVariant& firstRunPromptIds);
@@ -109,15 +111,16 @@ public:
     static constexpr const char* settingsFileExtension =    "settings";
 
     // Child directories of savePath for specific file types
-    static constexpr const char* parameterDirectory =       QT_TRANSLATE_NOOP("AppSettings", "Parameters");
-    static constexpr const char* telemetryDirectory =       QT_TRANSLATE_NOOP("AppSettings", "Telemetry");
-    static constexpr const char* missionDirectory =         QT_TRANSLATE_NOOP("AppSettings", "Missions");
-    static constexpr const char* logDirectory =             QT_TRANSLATE_NOOP("AppSettings", "Logs");
-    static constexpr const char* videoDirectory =           QT_TRANSLATE_NOOP("AppSettings", "Video");
-    static constexpr const char* photoDirectory =           QT_TRANSLATE_NOOP("AppSettings", "Photo");
-    static constexpr const char* crashDirectory =           QT_TRANSLATE_NOOP("AppSettings", "CrashLogs");
-    static constexpr const char* mavlinkActionsDirectory =  QT_TRANSLATE_NOOP("AppSettings", "MavlinkActions");
-    static constexpr const char* settingsDirectory =        QT_TRANSLATE_NOOP("AppSettings", "Settings");
+    static constexpr const char* parameterDirectory =           QT_TRANSLATE_NOOP("AppSettings", "Parameters");
+    static constexpr const char* telemetryDirectory =           QT_TRANSLATE_NOOP("AppSettings", "Telemetry");
+    static constexpr const char* missionDirectory =             QT_TRANSLATE_NOOP("AppSettings", "Missions");
+    static constexpr const char* logDirectory =                 QT_TRANSLATE_NOOP("AppSettings", "Logs");
+    static constexpr const char* videoDirectory =               QT_TRANSLATE_NOOP("AppSettings", "Video");
+    static constexpr const char* photoDirectory =               QT_TRANSLATE_NOOP("AppSettings", "Photo");
+    static constexpr const char* crashDirectory =               QT_TRANSLATE_NOOP("AppSettings", "CrashLogs");
+    static constexpr const char* mavlinkActionsDirectory =      QT_TRANSLATE_NOOP("AppSettings", "MavlinkActions");
+    static constexpr const char* parameterActionsDirectory =    QT_TRANSLATE_NOOP("AppSettings", "ParameterActions");
+    static constexpr const char* settingsDirectory =            QT_TRANSLATE_NOOP("AppSettings", "Settings");
 
 signals:
     void savePathsChanged();

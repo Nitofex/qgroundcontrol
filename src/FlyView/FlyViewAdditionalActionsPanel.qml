@@ -8,6 +8,7 @@ ColumnLayout {
     property var additionalActions
     property var mavlinkActions
     property var customActions
+    property var parameterActions
 
     property var  _activeVehicle:       QGroundControl.multiVehicleManager.activeVehicle
     property var  _guidedController:    globals.guidedControllerFlyView
@@ -55,6 +56,22 @@ ColumnLayout {
             onClicked: {
                 dropPanel.hide()
                 object.sendTo(_activeVehicle)
+            }
+        }
+    }
+
+    // User-defined Mavlink Parameter Actions
+    Repeater {
+        model: _activeVehicle ? parameterActions : undefined // The action list is a QmlObjectListModel
+
+        QGCButton {
+            Layout.fillWidth:   true
+            text:               object.label
+            enabled:            object.actionAvailable
+
+            onClicked: {
+                dropPanel.hide()
+                object.execute(_activeVehicle)
             }
         }
     }

@@ -1,0 +1,24 @@
+{
+    "fileType": "ParameterActions",
+    "version": 1,
+    "actions": [
+        {
+            "label": "Single parameter set valid",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_CTRL",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "label": "Single parameter non-existent fact",
+            "parameters": [
+                {
+                    "name": "ASDASD",
+                    "value": 7
+                }
+            ]
+        }
+    ]
+}

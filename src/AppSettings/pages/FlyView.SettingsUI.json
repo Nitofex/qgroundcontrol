@@ -82,6 +82,16 @@
             ]
         },
         {
+            "component": "ParameterActionSettings",
+            "sectionName": "Parameter Actions",
+            "keywords": [
+                "parameter action",
+                "pre-arm",
+                "post-arm",
+                "disarm"
+            ]
+        },
+        {
             "heading": "Virtual Joystick",
             "keywords": ["joystick", "virtual stick", "throttle", "left handed", "auto center"],
             "controls": [

@@ -293,6 +293,7 @@ void AppSettings::_checkSavePathDirectories(void)
         QGCFileHelper::ensureDirectoryExists(QGCFileHelper::joinPath(savePath, photoDirectory));
         QGCFileHelper::ensureDirectoryExists(QGCFileHelper::joinPath(savePath, crashDirectory));
         QGCFileHelper::ensureDirectoryExists(QGCFileHelper::joinPath(savePath, mavlinkActionsDirectory));
+        QGCFileHelper::ensureDirectoryExists(QGCFileHelper::joinPath(savePath, parameterActionsDirectory));
         QGCFileHelper::ensureDirectoryExists(QGCFileHelper::joinPath(savePath, settingsDirectory));
     }
 }
@@ -355,6 +356,11 @@ QString AppSettings::crashSavePath(void)
 QString AppSettings::mavlinkActionsSavePath(void)
 {
     return _childSavePath(mavlinkActionsDirectory);
+}
+
+QString AppSettings::parameterActionsSavePath(void)
+{
+    return _childSavePath(parameterActionsDirectory);
 }
 
 QString AppSettings::settingsSavePath(void)

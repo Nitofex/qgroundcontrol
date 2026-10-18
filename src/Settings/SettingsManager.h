@@ -11,6 +11,7 @@ class AppSettings;
 class AutoConnectSettings;
 class BatteryIndicatorSettings;
 class MavlinkActionsSettings;
+class ParameterActionsSettings;
 class FirmwareUpgradeSettings;
 class FlightMapSettings;
 class FlightModeSettings;
@@ -46,6 +47,7 @@ class SettingsManager : public QQmlPropertyMap
     Q_MOC_INCLUDE("AutoConnectSettings.h")
     Q_MOC_INCLUDE("BatteryIndicatorSettings.h")
     Q_MOC_INCLUDE("MavlinkActionsSettings.h")
+    Q_MOC_INCLUDE("ParameterActionsSettings.h")
     Q_MOC_INCLUDE("FirmwareUpgradeSettings.h")
     Q_MOC_INCLUDE("FlightMapSettings.h")
     Q_MOC_INCLUDE("FlightModeSettings.h")
@@ -70,7 +72,8 @@ class SettingsManager : public QQmlPropertyMap
     Q_PROPERTY(QObject *appSettings                     READ appSettings                    CONSTANT)
     Q_PROPERTY(QObject *autoConnectSettings             READ autoConnectSettings            CONSTANT)
     Q_PROPERTY(QObject *batteryIndicatorSettings        READ batteryIndicatorSettings       CONSTANT)
-    Q_PROPERTY(QObject *mavlinkActionsSettings    READ mavlinkActionsSettings   CONSTANT)
+    Q_PROPERTY(QObject *mavlinkActionsSettings          READ mavlinkActionsSettings         CONSTANT)
+    Q_PROPERTY(QObject *parameterActionsSettings        READ parameterActionsSettings       CONSTANT)
     Q_PROPERTY(QObject *firmwareUpgradeSettings         READ firmwareUpgradeSettings        CONSTANT)
     Q_PROPERTY(QObject *flightMapSettings               READ flightMapSettings              CONSTANT)
     Q_PROPERTY(QObject *flightModeSettings              READ flightModeSettings             CONSTANT)
@@ -83,12 +86,12 @@ class SettingsManager : public QQmlPropertyMap
     Q_PROPERTY(QObject *rtkSettings                     READ rtkSettings                    CONSTANT)
     Q_PROPERTY(QObject *unitsSettings                   READ unitsSettings                  CONSTANT)
     Q_PROPERTY(QObject *ntripSettings                   READ ntripSettings                  CONSTANT)
-    Q_PROPERTY(QObject* gpsCorrectionSettings READ gpsCorrectionSettings CONSTANT)
+    Q_PROPERTY(QObject* gpsCorrectionSettings           READ gpsCorrectionSettings          CONSTANT)
     Q_PROPERTY(QObject *videoSettings                   READ videoSettings                  CONSTANT)
     Q_PROPERTY(QObject *mavlinkSettings                 READ mavlinkSettings                CONSTANT)
     Q_PROPERTY(QObject *joystickManagerSettings         READ joystickManagerSettings        CONSTANT)
-    Q_PROPERTY(QObject *logManagerSettings              READ logManagerSettings              CONSTANT)
-    Q_PROPERTY(QObject *logViewerSettings               READ logViewerSettings               CONSTANT)
+    Q_PROPERTY(QObject *logManagerSettings              READ logManagerSettings             CONSTANT)
+    Q_PROPERTY(QObject *logViewerSettings               READ logViewerSettings              CONSTANT)
     Q_PROPERTY(QObject *viewer3DSettings                READ viewer3DSettings               CONSTANT)
 public:
     SettingsManager(QObject *parent = nullptr);
@@ -118,6 +121,7 @@ public:
     AutoConnectSettings *autoConnectSettings() const;
     BatteryIndicatorSettings *batteryIndicatorSettings() const;
     MavlinkActionsSettings *mavlinkActionsSettings() const;
+    ParameterActionsSettings *parameterActionsSettings() const;
     FirmwareUpgradeSettings *firmwareUpgradeSettings() const;
     FlightMapSettings *flightMapSettings() const;
     FlightModeSettings *flightModeSettings() const;
@@ -147,6 +151,7 @@ private:
     AutoConnectSettings *_autoConnectSettings = nullptr;
     BatteryIndicatorSettings *_batteryIndicatorSettings = nullptr;
     MavlinkActionsSettings *_mavlinkActionsSettings = nullptr;
+    ParameterActionsSettings *_parameterActionsSettings = nullptr;
     FirmwareUpgradeSettings *_firmwareUpgradeSettings = nullptr;
     FlightMapSettings *_flightMapSettings = nullptr;
     FlightModeSettings *_flightModeSettings = nullptr;

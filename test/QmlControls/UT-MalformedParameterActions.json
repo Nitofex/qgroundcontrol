@@ -1,0 +1,18 @@
+{
+    "fileType": "ParameterActions",
+    "version": 1,
+    "actions": [
+        {
+            "label": "Single parameter set valid",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_CTRL",
+                    "value
+                {
+                    "name": "CSD",
+                    "value": 3.0
+                }
+            ]
+        }
+    ]
+}

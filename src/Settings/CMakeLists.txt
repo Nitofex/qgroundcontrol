@@ -41,6 +41,8 @@ target_sources(
             OfflineMapsSettings.h
             PlanViewSettings.cc
             PlanViewSettings.h
+            ParameterActionsSettings.cc
+            ParameterActionsSettings.h
             RemoteIDSettings.cc
             RemoteIDSettings.h
             RTKSettings.cc

@@ -1,0 +1,91 @@
+{
+    "fileType": "ParameterActions",
+    "version": 1,
+    "actions": [
+        {
+            "label": "Multi Parameter set valid",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_YAW_OFF",
+                    "value": 1.0
+                },
+                {
+                    "name": "EKF2_GPS_V_NOISE",
+                    "value": 2.0
+                },
+                {
+                    "name": "EKF2_GPS_V_GATE",
+                    "value": 3.0
+                }
+            ]
+        },
+        {
+            "label": "Multi Parameter set invalid",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_YAW_OFF",
+                    "value": "someValue"
+                },
+                {
+                    "name": "EKF2_GPS_V_NOISE",
+                    "value": true
+                },
+                {
+                    "name": "EKF2_GPS_V_GATE",
+                    "value": null
+                }
+            ]
+        },
+        {
+            "label": "Multi Parameter set invalid partial",
+            "parameters": [
+                {
+                    "name": "EKF2_GPS_YAW_OFF",
+                    "value": "someValue"
+                },
+                {
+                    "name": "EKF2_GPS_V_NOISE",
+                    "value": 2.0
+                },
+                {
+                    "name": "EKF2_GPS_V_GATE",
+                    "value": 3.0
+                }
+            ]
+        },
+        {
+            "label": "Multi Parameter non-existent fact",
+            "parameters": [
+                {
+                    "name": "ASDASD",
+                    "value": 1.0
+                },
+                {
+                    "name": "EKF2_GPS_V_NOISE",
+                    "value": 2.0
+                },
+                {
+                    "name": "EKF2_GPS_V_GATE",
+                    "value": 3.0
+                }
+            ]
+        },
+        {
+            "label": "Multi Parameter non-existent facts",
+            "parameters": [
+                {
+                    "name": "ASD",
+                    "value": 1.0
+                },
+                {
+                    "name": "BSD",
+                    "value": 2.0
+                },
+                {
+                    "name": "CSD",
+                    "value": 3.0
+                }
+            ]
+        }
+    ]
+}

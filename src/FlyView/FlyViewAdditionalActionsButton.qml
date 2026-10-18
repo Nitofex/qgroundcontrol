@@ -10,7 +10,7 @@ ToolStripAction {
     id:         action
     text:       qsTr("Actions")
     iconSource: "qrc:/qmlimages/HamburgerThin.svg"
-    visible:    _additionalActions.anyActionAvailable || _mavlinkActions.anyActionAvailable || _customActions.anyActionAvailable
+    visible:    _additionalActions.anyActionAvailable || _mavlinkActions.anyActionAvailable || _customActions.anyActionAvailable || _parameterActions.anyActionAvailable
     enabled:    true
 
     property var _guidedController: globals.guidedControllerFlyView
@@ -29,11 +29,18 @@ ToolStripAction {
         guidedController: _guidedController
     }
 
+    property var _parameterActions: ParameterActionManager {
+        actionFileNameFact: QGroundControl.settingsManager.parameterActionsSettings.parameterActionsFile
+
+        property bool anyActionAvailable: QGroundControl.multiVehicleManager.activeVehicle && actions.count > 0
+    }
+
     dropPanelComponent: Component {
         FlyViewAdditionalActionsPanel {
             additionalActions:  _additionalActions
             mavlinkActions:     _mavlinkActions.actions
             customActions:      _customActions
+            parameterActions:   _parameterActions.actions
         }
     }
 }
